@@ -58,6 +58,11 @@ h1 {
     color: var(--slate-950);
 }
 
+h1:hover {
+    color: var(--yellow);
+    cursor: pointer;
+}
+
 .container {
     width: 100vw;
     height: 100vh;
@@ -119,4 +124,8 @@ h1 {
 
 .avatar-img {
     width: 3rem;
+}
+
+.avatar-text {
+    font-weight: var(--font-weight-bold);
 }
