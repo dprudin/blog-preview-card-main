@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'Figtree';
+    src: url('./assets/fonts/Figtree-VariableFont_wght.ttf'),
+         url('./assets/fonts/Figtree-Italic-VariableFont_wght.ttf');
+}
+
+:root {
+    /* FONT SIZE */
+    --text-h1-normal: 2.4rem;
+    --text-h1-variable: 2.08vw;
+    --text-h1-small: 2rem;
+    --text-paragraph-normal: 1.6rem;
+    --text-paragraph-variable: 2.08vw;
+    --text-paragraph-small: 1.2rem;
+
+    /* FONT FAMILY */
+    --font-family: 'Figtree', sans-serif;
+
+    /* FONT WEIGHT */
+    --font-weight-normal: 500;
+    --font-weight-medium: 700;
+    --font-weight-bold: 800;
+
+    /* LINE HEIGHTS */
+    --line-height-tight: 1.1;
+    --line-height-normal: 1.4;
+
+    /* COLORS */
+    --yellow: hsl(47, 88%, 63%);
+    --grey-500: hsl(0, 0%, 42%);
+    --slate-950: hsl(0, 0%, 7%);
+    --white: hsl(0, 0%, 100%);
+}
+
+html {
+    font-size: 62.5%; 
+    /* 10px / 16px = 62.5% */
+    /* 1rem = 10px */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Figtree", sans-serif;
+}
+
+p {
+    font-size: clamp(var(--text-paragraph-small), var(--text-paragraph-variable), var(--text-paragraph-normal));
+    color: var(--slate-950);
+}
+
+h1 {
+    font-size: clamp(var(--text-h1-small), var(--text-h1-variable), var(--text-h1-normal));
+    font-weight: var(--font-weight-bold);
+    color: var(--slate-950);
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    max-width: 35rem;
+    height: auto;
+    background-color: var(--white);
+    padding: 20px;
+    border: 1px solid var(--slate-950);
+    border-radius: 20px;
+    box-shadow: 5px 5px 0px var(--slate-950);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 5rem;
+}
+
+.article-img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.tag {
+    width: 8rem;
+    color: var(--slate-950);
+    background-color: var(--yellow);
+    padding: 0.6rem 0.4rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tag > p {
+    font-weight: var(--font-weight-bold);
+}
+
+/* .date-text {
+    font-weight: var(--font-weight-medium);
+} */
+
+.main-text {
+    color: var(--grey-500);
+    /* font-weight: var(--font-weight-medium); */
+    line-height: var(--line-height-normal);
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar-img {
+    width: 3rem;
+}
